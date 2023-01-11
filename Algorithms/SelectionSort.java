@@ -1,3 +1,5 @@
+package Algorithms;
+
 import java.util.Scanner;
 
 public class SelectionSort {
@@ -33,4 +35,3 @@ public class SelectionSort {
 
     }
 }
-
