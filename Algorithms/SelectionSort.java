@@ -1,5 +1,7 @@
 package Algorithms;
 
+import java.lang.reflect.Array;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class SelectionSort {
@@ -17,7 +19,7 @@ public class SelectionSort {
         }
 
         System.out.println("Sorting array......");
-
+        long startTime = System.nanoTime();
         for (i = 0; i < size; i++) {
             for (j = i + 1; j < size; j++) {
                 if (array[i] > array[j]) {
@@ -27,11 +29,10 @@ public class SelectionSort {
                 }
             }
         }
-
+        long stopTime = System.nanoTime();
+        long elapsedTime = stopTime - startTime;
         System.out.println("Now the array is sorted.");
-        for (i = 0; i < size; i++) {
-            System.out.println(array[i] + " ");
-        }
-
+        System.out.println("It took "+elapsedTime+" nano seconds");
+        System.out.println("Sorted array"+ Arrays.toString(array));
     }
 }
